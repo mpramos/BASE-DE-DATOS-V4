@@ -7,7 +7,7 @@ create table if not exists Movie(
 )
 select * from Movie
 
-insert into Movie values (1,'Historia del juguete','Juan Lasseter', 1995, 81)
+insert into Movie values (1,'Historia del juguete','Juan Lasseter', 1995, 81);
 INSERT INTO movie VALUES (2, 'La vida de un bicho', 'Juan Lasseter', 1998, 95);
 INSERT INTO movie VALUES (3, 'Toy Story 2', 'Juan Lasseter', 1999, 93);
 INSERT INTO movie VALUES (4, 'Monstruos inc.', 'Pete Docter', 2001, 92);
