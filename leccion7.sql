@@ -31,3 +31,23 @@ INSERT INTO Empleados (Role, Nombre, Edificio, Años_empleado) VALUES ('Gerente'
 INSERT INTO Empleados (Role, Nombre, Edificio, Años_empleado) VALUES ('Gerente', 'Shirlee M.', '1e', 3);
 INSERT INTO Empleados (Role, Nombre, Edificio, Años_empleado) VALUES ('Gerente', 'Daria O.', '2w', 6);
 
+-- Encuentre la lista de todos los edificios que tienen empleados.
+
+select DISTINCT E.nombre_del_edificio
+from edificios as E
+LEFT JOIN empleados as Emp
+ON E.nombre_del_edificio = Emp.edificio
+
+-- Encuentra la lista de todos los edificios y su capacidad.
+
+SELECT E.Nombre_Del_Edificio, E.Capacidad
+FROM Edificios AS E
+INNER JOIN Empleados AS Emp
+ON E.Nombre_Del_Edificio = Emp.Edificio;
+
+
+-- Enumere todos los edificios y las distintas funciones de los empleados en cada edificio (incluidos los edificios vacíos)
+
+select E.nombre_del_edificio, COALESCE(Emp.role, 'SIN EMPLEADOS') as Funcion_Empleado
+from edificios as E
+LEFT JOIN empleados as Emp ON  E.nombre_del_edificio = Emp.Edificio
