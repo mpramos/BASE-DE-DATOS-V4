@@ -21,3 +21,13 @@ INSERT INTO movie VALUES (11, 'Toy Story 3', 'Lee Unkrich', 2010, 103);
 INSERT INTO movie VALUES (12, 'coches 2', 'Juan Lasseter', 2011, 120);
 INSERT INTO movie VALUES (13, 'Corajudo', 'Brenda Chapman', 2012, 102);
 INSERT INTO movie VALUES (14, 'Monsters University', 'Daniel Scanlon', 2013, 110);
+
+
+
+-- tabla de taquillas
+CREATE TABLE Taquilla (
+    Id_pelicula INT PRIMARY KEY,
+    Clasificacion DECIMAL(3,1),
+    Ventas_locales BIGINT,
+    Ventas_Internacionales BIGINT
+);
